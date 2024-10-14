@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:35:20 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/14 18:03:34 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/14 19:04:52 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -27,6 +28,7 @@ char	*ft_strdup(const char *src);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_strchr(const char *string, int find);
 char	*ft_strrchr(const char *string, int find);
+char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 
 int		ft_atoi(const char *str);
