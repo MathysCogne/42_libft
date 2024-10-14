@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:35:20 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/14 19:34:00 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/14 20:18:05 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*ft_strchr(const char *string, int find);
 char	*ft_strrchr(const char *string, int find);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 int		ft_atoi(const char *str);
 int		ft_isalpha(int character);
