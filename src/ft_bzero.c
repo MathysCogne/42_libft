@@ -6,13 +6,15 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:16:46 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/13 18:20:19 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/14 15:39:27 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, unsigned int n)
+#include "libft.h"
+
+void	bzero(void *s, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;

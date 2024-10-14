@@ -6,13 +6,15 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:03:56 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/13 18:09:04 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/14 15:39:38 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, unsigned int len)
+#include "libft.h"
+
+size_t	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	i = 0;

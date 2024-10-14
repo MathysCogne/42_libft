@@ -6,13 +6,38 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:36:45 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/13 18:46:28 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/14 15:39:37 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	ft_memmove_backward(unsigned char *d, const unsigned char *s, size_t n)
 {
-	unsigned int		i;
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+}
+
+void	ft_memmove_foward(unsigned char *d, const unsigned char *s, size_t n)
+{
+	size_t	i;
+
+	i = n;
+	while (i < n)
+	{
+		d[i - 1] = s[i - 1];
+		--i;
+	}
+}
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
 	unsigned char		*d;
 	const unsigned char	*s;
 
@@ -22,21 +47,11 @@ void	*ft_memmove(void *dest, const void *src, unsigned int n)
 	s = (const unsigned char *)src;
 	if (d < s)
 	{
-		i = 0;
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		ft_memmove_forward(d, s, n);
 	}
 	else
 	{
-		i = n;
-		while (i > 0)
-		{
-			d[i - 1] = s[s - 1];
-			--i;
-		}
+		ft_memmove_backward(d, s, n);
 	}
 	return (dest);
 }

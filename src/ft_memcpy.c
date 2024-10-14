@@ -6,14 +6,16 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:28:56 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/13 18:34:01 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/14 15:39:35 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int		i;
-	unsigned char		*d;
+	size_t				i;
+	size_t				*d;
 	const unsigned char	*s;
 
 	d = (unsigned char *)dest;
