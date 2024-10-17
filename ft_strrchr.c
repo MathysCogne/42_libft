@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:22:48 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/15 20:21:20 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/17 14:06:31 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *string, int find)
 	size_t	i;
 
 	i = ft_strlen(string);
-	if (find == '\0')
+	if (string[i] == (char)find)
 		return ((char *)&string[i]);
 	while (i > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 20:22:31 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/17 13:35:20 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:42:53 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_lst;
 
-	if (!content)
-		return (NULL);
 	new_lst = malloc(sizeof(t_list));
 	if (!new_lst)
 		return (NULL);
