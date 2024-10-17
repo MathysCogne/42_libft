@@ -6,7 +6,7 @@
 #    By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 17:25:50 by mcogne--          #+#    #+#              #
-#    Updated: 2024/10/15 20:22:27 by mcogne--         ###   ########.fr        #
+#    Updated: 2024/10/16 21:09:35 by mcogne--         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	  ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 	  ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 
-BONUS_SRC = 
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS = $(SRC:.c=.o)
 BONUS_OBJS = $(BONUS_SRC:.c=.o)
