@@ -1,5 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
+<img src="subject/banner.png" alt="Main GIF" width="650" />
 <h1>42 - LIBFT</h1>
 <p><strong>Your personal C library</strong></a></p>
 <p><a href="https://github.com/MathysCogne/42_libft/blob/main/subject/subject_libft.pdf"><strong>Subject</strong></a></p>
