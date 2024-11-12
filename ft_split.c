@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 17:33:05 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/11/12 16:43:45 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:37:30 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,9 @@ static char	**worlds(char const *s, char c, char **tab)
 			tab[w] = malloc_worlds(&s[i], c);
 			if (!tab[w])
 			{
-				free(tab[w]);
-				while (--w != 0)
-					free(tab[w]);
+				while (w > 0)
+					free(tab[--w]);
+				free(tab);
 				return (NULL);
 			}
 			w++;
