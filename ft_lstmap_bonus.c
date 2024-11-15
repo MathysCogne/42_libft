@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:18:38 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/11/12 21:58:25 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:15:45 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_ele;
+	void	*content;
 
 	if (!lst || !f || !del)
 		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
-		new_ele = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		new_ele = ft_lstnew(content);
 		if (!new_ele)
 		{
 			ft_lstclear(&new_lst, del);
+			del(content);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_lst, new_ele);
